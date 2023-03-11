@@ -4,7 +4,7 @@
     --clr-primary-800: hsl(233, 26%, 24%);
 
     --clr-neutral-500: hsl(233, 8%, 62%);
-    --clr-neutral-200: hsl(220, 16%, 96%);
+    --clr-neutral-200: hsl(220, 14%, 96%);
     --clr-neutral-100: hsl(0, 0%, 98%);
 
     --clr-white: hsl(0, 0%, 100%);
@@ -27,9 +27,13 @@ h1,
 h2,
 h3 {
     font-weight: var(--fw-light);
+    color: var(--clr-primary-800);
 }
 
 p {
     font-size: 0.875rem;
     line-height: 1.5;
+    color: var(--clr-neutral-500);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
