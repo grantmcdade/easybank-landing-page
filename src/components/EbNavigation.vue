@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="nav">
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -9,3 +9,10 @@
         </ul>
     </nav>
 </template>
+
+<style lang="scss" scoped>
+.nav {
+    position: absolute;
+    display: none;
+}
+</style>

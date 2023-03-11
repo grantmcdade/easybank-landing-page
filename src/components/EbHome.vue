@@ -1,11 +1,12 @@
 <template>
   <div>
+    <div class="mockups"></div>
     <h1>Next generation digital banking</h1>
     <p>
       Take your financial life online. Your Easybank account will be a
       one-stop-shop for spending, saving, budgeting, investing, and much more.
     </p>
-    <button>Request Invite</button>
+    <request-invite />
     <section>
       <h2>Why choose Easybank?</h2>
       <p>
@@ -27,7 +28,9 @@
     </section>
     <footer>
       <eb-footer-menu />
-      © Easybank. All Rights Reserved
+      <request-invite />
+
+      <div>© Easybank. All Rights Reserved</div>
 
       <div class="attribution">
         Challenge by
@@ -44,6 +47,7 @@ import type { Article } from '@/types';
 import { ref } from 'vue';
 import EbArticle from '@/components/EbArticle.vue';
 import EbFooterMenu from '@/components/EbFooterMenu.vue';
+import RequestInvite from '@/components/RequestInvite.vue';
 
 const advantages = ref([
   {
@@ -96,4 +100,11 @@ const latestArticles = ref<Article[]>([
 ]);
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.mockups {
+  background-image: url('@/assets/images/image-mockups.png'), url('@/assets/images/bg-intro-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+</style>
