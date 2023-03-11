@@ -1,8 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 
-import '@unocss/reset/normalize.css'
-import 'uno.css'
-import './assets/main.scss'
+import '@unocss/reset/normalize.css';
+import 'uno.css';
+import './assets/main.scss';
 
-createApp(App).mount('#app')
+createApp(App).mount('#app');

@@ -14,7 +14,7 @@
 
     --fw-light: 300;
     --fw-normal: 400;
-    --fw-bold: 700
+    --fw-bold: 700;
 }
 
 body {
@@ -23,6 +23,13 @@ body {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: var(--fw-light);
+}
+
+p {
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
