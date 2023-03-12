@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="eb-home">
         <section class="pb-15">
             <div class="mockups"></div>
-            <h1>Next generation digital banking</h1>
+            <h1>Next generation digitel banking</h1>
             <p class="px-3 pb-2">
                 Take your financial life online. Your Easybank account will be a
                 one-stop-shop for spending, saving, budgeting, investing, and
@@ -121,8 +121,8 @@ const latestArticles = ref<Article[]>([
     background-image: url('@/assets/images/image-mockups.png'),
         url('@/assets/images/bg-intro-desktop.svg');
     background-repeat: no-repeat;
-    background-size: cover, 220% 210%;
-    background-position: bottom, bottom -1.5em left -6em;
+    background-size: 95%, 200% 170%;
+    background-position: bottom 0 left 10px, bottom -1.5em left -5em;
     height: 50vh;
 }
 
@@ -138,5 +138,14 @@ const latestArticles = ref<Article[]>([
 .advantage-icon {
     width: 4.5rem;
     aspect-ratio: 1;
+}
+
+.eb-home {
+    background-image: url('@/assets/design/mobile-design-greyscale.jpg');
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 2.4rem;
 }
 </style>
