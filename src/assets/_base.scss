@@ -30,10 +30,19 @@ h3 {
     color: var(--clr-primary-800);
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
 p {
     font-size: 0.875rem;
-    line-height: 1.5;
+    line-height: 1.8;
+    letter-spacing: calc(1px / 4);
     color: var(--clr-neutral-500);
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: var(--fs);
+    padding-right: var(--fs);
 }
