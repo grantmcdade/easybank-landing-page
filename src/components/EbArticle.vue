@@ -5,7 +5,7 @@
             <span class="author">{{ article.author }}</span>
         </div>
         <h3>{{ article.title }}</h3>
-        <p class="text-green">{{ article.description }}</p>
+        <p>{{ article.description }}</p>
     </div>
 </template>
 
@@ -21,7 +21,6 @@ defineProps<Props>();
 
 <style lang="scss" scoped>
 img {
-    opacity: 0.5;
     height: 12.5rem;
     width: 20.5rem;
     margin-top: 0.5rem;
@@ -43,12 +42,15 @@ h3 {
     text-align: left;
     font-size: 0.96rem;
     line-height: 1.3;
+    margin-bottom: 0.5rem;
 }
 
 p {
-    margin-left: 2.2rem;
-    margin-right: 2.2rem;
-    line-height: 1.4;
+    margin-left: 2.35rem;
+    margin-right: 2.3rem;
+    margin-top: 0.55rem;
+    margin-bottom: 3.5rem;
+    line-height: 1.5;
     text-align: left;
     font-size: 0.75rem;
 }
