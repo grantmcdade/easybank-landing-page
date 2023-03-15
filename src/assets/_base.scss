@@ -46,3 +46,13 @@ p {
     padding-left: var(--fs);
     padding-right: var(--fs);
 }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 1em 0;
+    color: var(--clr-neutral-500);
+}
+.attribution a {
+    color: var(--clr-primary-500);
+}

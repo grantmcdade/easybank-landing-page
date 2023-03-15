@@ -21,8 +21,8 @@ defineProps<Props>();
 
 <style lang="scss" scoped>
 img {
-    height: 12.5rem;
-    width: 20.5rem;
+    max-height: 12.5rem;
+    max-width: 20.5rem;
     margin-top: 0.5rem;
 }
 

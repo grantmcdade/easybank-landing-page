@@ -18,4 +18,9 @@ button {
         var(--clr-primary-500)
     );
 }
+
+button[data-small='true'] {
+    padding: 0.8em 2.3em;
+    margin: 0.8em 0;
+}
 </style>

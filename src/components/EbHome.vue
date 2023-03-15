@@ -73,10 +73,17 @@ Z
                     </g>
                 </g>
             </svg>
+            <div class="social-icons">
+                <img src="@/assets/images/icon-facebook.svg" alt="Facebook" />
+                <img src="@/assets/images/icon-youtube.svg" alt="Youtube" />
+                <img src="@/assets/images/icon-twitter.svg" alt="Twitter" />
+                <img src="@/assets/images/icon-pinterest.svg" alt="Pinterest" />
+                <img src="@/assets/images/icon-instagram.svg" alt="Instagram" />
+            </div>
             <eb-footer-menu />
-            <request-invite />
+            <request-invite :data-small="true" />
 
-            <div>© Easybank. All Rights Reserved</div>
+            <div class="copyright">© Easybank. All Rights Reserved</div>
 
             <div class="attribution">
                 Challenge by
@@ -211,7 +218,20 @@ footer {
     padding-top: 1em;
 
     svg {
-        padding-top: 1em;
+        padding: 1em 0;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75em;
+    }
+
+    .copyright {
+        color: var(--clr-neutral-500);
+        font-size: 0.8rem;
+        padding: 1em 0;
     }
 }
 </style>
