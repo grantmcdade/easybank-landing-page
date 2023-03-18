@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="article">
         <img :src="article.image" />
         <div class="text-left">
             <span class="author">{{ article.author }}</span>
@@ -21,9 +21,13 @@ defineProps<Props>();
 
 <style lang="scss" scoped>
 img {
-    max-height: 12.5rem;
-    max-width: 20.5rem;
+    max-height: auto;
+    max-width: 100%;
     margin-top: 0.5rem;
+
+    @media (min-width: 375px) {
+        margin-top: 0;
+    }
 }
 
 .author {
@@ -32,6 +36,10 @@ img {
     margin-top: 1.5rem;
     margin-left: 3.5rem;
     text-align: left;
+
+    @media (min-width: 375px) {
+        margin: 1.5rem 0 0 1.5rem;
+    }
 }
 
 h3 {
@@ -43,6 +51,11 @@ h3 {
     font-size: 0.96rem;
     line-height: 1.3;
     margin-bottom: 0.5rem;
+
+    @media (min-width: 375px) {
+        margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+        padding: 0;
+    }
 }
 
 p {
@@ -53,5 +66,17 @@ p {
     line-height: 1.5;
     text-align: left;
     font-size: 0.75rem;
+
+    @media (min-width: 375px) {
+        margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+        padding: 0;
+    }
+}
+
+.article {
+    max-width: 16rem;
+    background-color: var(--clr-neutral-100);
+    border-radius: 5px;
+    overflow: hidden;
 }
 </style>

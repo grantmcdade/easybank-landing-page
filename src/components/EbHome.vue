@@ -1,35 +1,41 @@
 Z
 <template>
     <div class="eb-home">
-        <section class="pb-21">
+        <section class="pb-21 grid">
             <div class="mockups"></div>
-            <h1 class="mb-4">Next generation digital banking</h1>
-            <p class="px-4 pb-8 my-0">
-                Take your financial life online. Your Easybank account will be a
-                one-stop-shop for spending, saving, budgeting, investing, and
-                much more.
-            </p>
-            <request-invite />
-        </section>
-        <section class="shaded pt-12 pb-7">
-            <h2 class="section-title">Why choose Easybank?</h2>
-            <p class="pb-10">
-                We leverage Open Banking to turn your bank account into your
-                financial hub. Control your finances like never before.
-            </p>
-            <template v-for="advantage in advantages" :key="advantage.title">
-                <img
-                    class="advantage-icon"
-                    :src="advantage.image"
-                    v-if="advantage.image"
-                    alt=""
-                />
-                <h3 class="advantage-title">
-                    {{ advantage.title }}
-                </h3>
-                <p class="advantage-reason">
-                    {{ advantage.reason }}
+            <div>
+                <h1 class="mb-4">Next generation digital banking</h1>
+                <p class="px-4 pb-8 my-0">
+                    Take your financial life online. Your Easybank account will
+                    be a one-stop-shop for spending, saving, budgeting,
+                    investing, and much more.
                 </p>
+                <request-invite />
+            </div>
+        </section>
+        <section class="shaded advantages pt-12 pb-7">
+            <div class="advantages-title">
+                <h2 class="section-title">Why choose Easybank?</h2>
+                <p class="pb-10">
+                    We leverage Open Banking to turn your bank account into your
+                    financial hub. Control your finances like never before.
+                </p>
+            </div>
+            <template v-for="advantage in advantages" :key="advantage.title">
+                <div>
+                    <img
+                        class="advantage-icon"
+                        :src="advantage.image"
+                        v-if="advantage.image"
+                        alt=""
+                    />
+                    <h3 class="advantage-title">
+                        {{ advantage.title }}
+                    </h3>
+                    <p class="advantage-reason">
+                        {{ advantage.reason }}
+                    </p>
+                </div>
             </template>
         </section>
         <section class="latest-articles pt-16">
@@ -200,15 +206,42 @@ const latestArticles = ref<Article[]>([
     margin-bottom: 1.9rem;
 }
 
+@media (min-width: 375px) {
+    .advantages {
+        display: grid;
+        margin: 3rem;
+        grid-template-areas:
+            'title title title title'
+            'card card card card';
+    }
+}
+
+.advantages-title {
+    grid-area: title;
+}
+
 h1 {
     font-size: 2.42rem;
     line-height: 1.2;
 }
 
 .latest-articles {
+    @media (min-width: 375px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5em;
+        text-align: left;
+        background-color: var(--clr-neutral-200);
+        margin: 3rem;
+    }
+
     h2 {
         font-size: 31px;
         margin-top: 28px;
+
+        @media (min-width: 375px) {
+            grid-column: 1 / -1;
+        }
     }
 }
 
