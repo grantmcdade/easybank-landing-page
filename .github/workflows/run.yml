@@ -1,0 +1,23 @@
+name: Run Integration Tests on MS SQL
+on:
+    workflow_dispatch:
+    push:
+
+concurrency:
+    group: integration-tests-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    integration-test:
+        timeout-minutes: 120
+        runs-on:
+            [
+                self-hosted,
+                integration-test,
+                vcpu_4,
+                ram_16,
+                aqua-master-integration-test,
+            ]
+        steps:
+            - name: Say Hello
+              run: echo "Hello World!"
